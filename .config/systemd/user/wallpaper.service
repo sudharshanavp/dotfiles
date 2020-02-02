@@ -3,9 +3,10 @@ Description=Wallpaper changer
 
 [Service]
 Type=oneshot
-ExecStart="/home/linden/.scripts/wallpaper-changer.sh"
+Environment=DISPLAY=:0
+ExecStart=/home/linden/.scripts/wallpaper-changer.sh
 
 [Install]
-WantedBy=basic.target
+WantedBy=default.target
 
 

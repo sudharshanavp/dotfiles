@@ -1,5 +1,5 @@
 ./home/linden/.xprofile
-systemctl --user import-environment DISPLAY
+systemctl --user start wallpaper.timer
 xsetroot -cursor_name left_ptr
 exec bspwm
 
