@@ -1,0 +1,11 @@
+[Unit]
+Description=Wallpaper changer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/zsh $HOME/.scripts/wallpaper-changer.sh
+
+[Install]
+WantedBy=basic.target
+
+

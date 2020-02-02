@@ -1,0 +1,10 @@
+[Unit]
+Description=Wallpaper Changer Timer
+
+[Timer]
+OnCalendar=*:0/5
+Persistent=true
+Unit=wallpaper.service
+
+[Install]
+WantedBy=wallpaper.service
