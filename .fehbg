@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/linden/Pictures/Wallpapers/rolling-waves.jpg' 
