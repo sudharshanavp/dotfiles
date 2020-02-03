@@ -9,6 +9,7 @@
 .config/systemd/user/sockets.target.wants/
 .config/user-dirs.dirs
 .config/user-dirs.locale
+.config/QtProject.conf
 .config/vlc/
 .config/wpg/
 .config/xarchiver/
