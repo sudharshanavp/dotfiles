@@ -13,6 +13,8 @@
 .config/vlc/
 .config/wpg/
 .config/xarchiver/
+.config/GIMP/
+.config/inkscape/
 .config/ytmdl/
 .dmrc
 .gitconfig
@@ -47,4 +49,5 @@ Music/
 Pictures/
 Videos/
 backup/
+Documents/
 yay/

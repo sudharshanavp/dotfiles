@@ -17,6 +17,7 @@ documents_ext: &docs
   - pptx
   - doc
   - txt
+  - md
 
 rules:
   #Moving pictures
