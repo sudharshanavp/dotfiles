@@ -1,0 +1,48 @@
+##Organizer config file
+
+#extension lists
+img_ext: &img
+  - png
+  - jpg
+  - gif
+  - jpeg
+
+audio_ext: &audio
+  - mp3
+  - wav
+  - ogg
+
+documents_ext: &docs
+  - pdf
+  - pptx
+  - doc
+  - txt
+
+rules:
+  #Moving pictures
+  - folders: ~/Downloads/
+    filters:
+      - extension: *img
+    actions:
+      - move: ~/Pictures/
+
+  #Moving audio
+  - folders: ~/Downloads/
+    filters:
+      - extension: *audio
+    actions:
+      - move: ~/dlaudio/
+
+  #Moving Documents
+  - folders: ~/Downloads/
+    filters:
+      - extension: *docs
+    actions:
+      - move: ~/Documents/
+
+
+
+
+ 
+ 
+ 
