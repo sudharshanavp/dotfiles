@@ -128,4 +128,5 @@ super + w
 super + v
 	bspc desktop --focus '^2' && discord
 
-
+super + l
+	~/.scripts/desktop_lock.sh
