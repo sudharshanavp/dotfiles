@@ -59,4 +59,5 @@ yay/
 .config/transmission/torrents/
 Downloads/
 .config/beets/library.db
+.config/beets/state.pickle
 .config/mpd/database
