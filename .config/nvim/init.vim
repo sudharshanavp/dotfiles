@@ -11,12 +11,26 @@ Plug 'sbdchd/neoformat'
 Plug 'machakann/vim-highlightedyank'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'thaerkh/vim-indentguides'
+Plug 'junegunn/goyo.vim'
+Plug 'reedes/vim-pencil'
 
 call plug#end()
 
-
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 set clipboard+=unnamedplus 
+filetype plugin on
+
+
+"Vim-Pencil Plugin setting
+
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,md call pencil#init({'wrap': 'hard', 'autoformat': 1})
+  autocmd FileType text     call pencil#init({'wrap': 'hard', 'autoformat': 0})
+augroup END
+
+"deoplete plugin setting
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 let g:deoplete#enable_at_startup = 1
 
@@ -31,6 +45,9 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
+
+
+"ONEDARK COLORSCHEME CONFIGURATION
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
