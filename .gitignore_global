@@ -53,3 +53,8 @@ yay/
 .config/mpd/pid
 .config/mpd/playlist/
 .config/mpd/state
+.config/transmission/dht.dat
+.config/transmission/resume/
+.config/transmission/stats.json
+.config/transmission/torrents/
+Downloads/
