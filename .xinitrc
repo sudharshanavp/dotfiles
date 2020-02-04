@@ -1,4 +1,5 @@
 ./home/linden/.xprofile
+systemctl --user set-environment DISPLAY=:0
 systemctl --user start wallpaper.timer
 xsetroot -cursor_name left_ptr
 export GTK_IM_MODULE=ibus
