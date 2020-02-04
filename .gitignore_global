@@ -58,3 +58,5 @@ yay/
 .config/transmission/stats.json
 .config/transmission/torrents/
 Downloads/
+.config/beets/library.db
+.config/mpd/database
