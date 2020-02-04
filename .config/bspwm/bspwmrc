@@ -30,4 +30,3 @@ st &
 dunst &
 sleep 1
 notify-send "BSPWM Loaded" "with rolling waves" 
-$HOME/.scripts/mpc-startup.sh &
