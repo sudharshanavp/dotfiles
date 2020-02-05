@@ -130,3 +130,14 @@ super + v
 
 super + l
 	~/.scripts/desktop_lock.sh
+
+# Media Keys
+
+XF86AudioRaiseVolume
+	pulsemixer --change-volume +2
+
+XF86AudioLowerVolume
+	pulsemixer --change-volume -2
+
+XF86AudioMute
+	pulsemixer --toggle-mute
