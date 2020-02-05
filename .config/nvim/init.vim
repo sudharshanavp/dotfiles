@@ -14,21 +14,20 @@ Plug 'sheerun/vim-polyglot'
 Plug 'thaerkh/vim-indentguides'
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
 set clipboard+=unnamedplus 
 filetype plugin on
-
+set spell spelllang=en_us
 
 "Vim-Pencil Plugin setting
-
 augroup pencil
   autocmd!
-  autocmd FileType markdown,md call pencil#init({'wrap': 'hard', 'autoformat': 1})
-  autocmd FileType text     call pencil#init({'wrap': 'hard', 'autoformat': 0})
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
 augroup END
-
 "deoplete plugin setting
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
