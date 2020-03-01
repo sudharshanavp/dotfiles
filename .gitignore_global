@@ -68,3 +68,8 @@ Downloads/
 .fehbg
 .zcompdump-rei-5.8
 builds/
+.config/Abricotine/
+.eclipse/
+.swt/
+.tooling/
+eclipse-workspace/
