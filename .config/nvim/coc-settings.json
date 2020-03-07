@@ -1,0 +1,32 @@
+{
+  // Require .prettierrc
+  "prettier.requireConfig": true,
+  
+  "suggest.maxCompleteItemCount": 20,
+
+  // Run prettier (and others)
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "Markdown",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  //html config
+
+  "html.enable": true,
+  "html.filetypes": [
+      "html",
+      "handlebars",
+      "htmldjango",
+      "htm"
+  ],
+
+  "html.format.enable": true,
+  "html.validate.styles": true,
+  "html.validate.html": true,
+  "html.validate.scripts": true
+}
