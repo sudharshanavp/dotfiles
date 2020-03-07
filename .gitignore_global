@@ -73,3 +73,9 @@ builds/
 .swt/
 .tooling/
 eclipse-workspace/
+.bundle/
+.config/coc/
+.gem/
+.pylint.d/
+Projects/
+texput.log
