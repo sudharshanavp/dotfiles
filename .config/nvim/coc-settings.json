@@ -1,14 +1,13 @@
 {
   // Require .prettierrc
-  "prettier.requireConfig": true,
+  "prettier.requireConfig": false,
   
   "suggest.maxCompleteItemCount": 20,
 
   // Run prettier (and others)
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
-    "markdown",
-    "Markdown",
+    "html",
     "javascript",
     "javascriptreact",
     "typescript",
