@@ -79,3 +79,21 @@ eclipse-workspace/
 .pylint.d/
 Projects/
 texput.log
+.arduino15/
+.config/Code - OSS/
+.config/desmume/
+.config/libreoffice/
+.config/mimeapps.list
+.config/nvim/.netrwhist
+.config/octave/
+.config/retroarch/
+.gnupg/
+.java/
+.jssc/
+.octave_hist
+.p10k.zsh
+.pub-cache/
+.python_history
+.vscode-oss/
+Arduino/
+snap/
