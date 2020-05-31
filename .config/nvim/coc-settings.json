@@ -3,7 +3,11 @@
   "python.jediEnabled": false,
   // Require .prettierrc
   "prettier.requireConfig": false,
-  
+  "prettier.disableLanguages": [
+      "vue",
+      "markdown"
+  ],
+
   "suggest.maxCompleteItemCount": 20,
 
   // Run prettier (and others)
@@ -29,5 +33,11 @@
   "html.format.enable": true,
   "html.validate.styles": true,
   "html.validate.html": true,
-  "html.validate.scripts": true
+  "html.validate.scripts": true,
+
+  "markdownlint.config": {
+      "default": true,
+      "single-title": false,
+      "line-length": false
+  }
 }
