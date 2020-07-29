@@ -1,15 +1,36 @@
-#!/usr/bin/env sh
-
-POLYBAR_CONFIG=$HOME/.config/polybar/config.ini
-
-# Terminate already running bar instances
+#/!bin/bash
+# Detect if secondary monitor is connected, if so, add a specific bar and move tray to it
+# Else, keep tray on main monitor
+# see https://github.com/polybar/polybar/issues/763
 killall -q polybar
-# If all your bars have ipc enabled, you can also use 
-# polybar-msg cmd quit
 
-# Launch bar1 and bar2
-tee -a /tmp/polybar1.log /tmp/polybar2.log
-polybar -c $POLYBAR_CONFIG top >>/tmp/polybar1.log 2>&1 &
-polybar -c $POLYBAR_CONFIG bottom >>/tmp/polybar2.log 2>&1 &
+# Wait until the processes have been shut down
+while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
 
+outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
+set -- $outputs
+tray_output=$1
 
+	for m in $outputs; do
+		if [ $m == $1 ] 
+		then		
+			MONITOR=$m polybar --reload top -c ~/.config/polybar/config &	
+		elif [ $m == $2 ]
+		then
+		    tray_output=$m
+			MONITOR=$m polybar --reload top -c ~/.config/polybar/config &
+		    	MONITOR=$m polybar --reload bottom -c ~/.config/polybar/config &
+		else
+			MONITOR=$m polybar --reload top -c ~/.config/polybar/config &
+		    	MONITOR=$m polybar --reload bottom -c ~/.config/polybar/config &
+	        fi
+	done
+
+  for m in $outputs; do
+  	export MONITOR1=$1
+  	export MONITOR2=$2
+   	export TRAY_POSITION=none
+    if [[ $m == $tray_output ]]; then
+       TRAY_POSITION=right
+  fi
+done

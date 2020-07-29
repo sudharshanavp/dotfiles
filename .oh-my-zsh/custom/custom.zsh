@@ -1,6 +1,5 @@
-
 # ENVIRONMENT VARIABLES
-export PATH="$PATH:$HOME/.local/bin:$HOME/bin:/home/linden/.gem/ruby/2.7.0/bin"
+export PATH="$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.gem/ruby/2.7.0/bin"
 export EDITOR=nvim
 export BROWSER=firefox
 export READER=zathura

@@ -11,6 +11,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4
+
 " Clipboard settings
 set clipboard+=unnamedplus
 set number
